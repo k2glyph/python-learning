@@ -10,3 +10,7 @@ print("\n")
 for index in range(0, len(student_names), 2):
     print("Student name is {0}".format(student_names[index]))
 
+for name in student_names:
+    if name == "Mark":
+        print("Found him!"+name)
+    print("Currently testing"+ name)
