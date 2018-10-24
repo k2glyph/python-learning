@@ -14,3 +14,19 @@ for name in student_names:
     if name == "Mark":
         print("Found him!"+name)
     print("Currently testing"+ name)
+
+# While loop
+print("\n")
+x=0
+while x<len(student_names):
+    print(f"Student name is: {student_names[x]}")
+    x+=1
+
+print("\n")
+x=0
+while True:
+    if(x==3):
+     break
+    print(f"Student name is: {student_names[x]}")
+    x+=1
+    
