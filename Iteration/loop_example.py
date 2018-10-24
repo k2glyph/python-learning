@@ -1,0 +1,12 @@
+student_names =["Mark", "katarina", "jessica"]
+# For each loop example for 
+for name in student_names:
+    print("Student name is {0}".format(name))
+print("\n")
+# traditional for loop with range function 
+for index in range(len(student_names)):
+    print("Student name is {0}".format(student_names[index]))
+print("\n")
+for index in range(0, len(student_names), 2):
+    print("Student name is {0}".format(student_names[index]))
+
