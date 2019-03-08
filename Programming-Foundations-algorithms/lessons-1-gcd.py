@@ -1,5 +1,8 @@
 '''
-This is based on simple algorithms based on Euclidean algorithms where
+Euclidean Algorithm:
+The Euclidean algorithm is a way to find the greatest common divisor of two positive integers
+Example:
+This is based on simple algorithms based on Euclidean algorithms where gcd of 96 and 60 can be figure out in this way:
     96=60.1+36
     60=36.1+24
     36=24.1+12 
