@@ -39,9 +39,9 @@ class LinkedList(object):
     # Search for the item until value match by the search item
     def find(self, val):
         item = self.head
-        while(item !=None):
-            if item.get_value ==val:
-                return val
+        while(item != None):
+            if item.get_value() == val:
+                return item
             else:
                 item=item.get_next()
         return None
@@ -49,7 +49,17 @@ class LinkedList(object):
     def deleteAt(self, idx):
         if idx > self.count-1:
             return 
-        
+        if idx==0:
+            self.head=self.head.get_next()
+        else:
+            tempid=0
+            node=self.head
+            while idx-1>tempid:
+                node=node.get_next()
+                tempid +=1
+            node.set_next(node.get_next().get_next())
+            self.count -= 1
+            return 
         
 
     def dump_list(self):
@@ -63,10 +73,16 @@ itemlist.insert(10)
 itemlist.insert(38)
 itemlist.insert(13)
 itemlist.insert(15)
-
+itemlist.insert(12)
+itemlist.insert(76)
 itemlist.dump_list()
 
 print("Item count", itemlist.get_count())
 print("Find Element", itemlist.find(13))
 print("Find Element", itemlist.find(40))
 
+# itemlist.deleteAt(2)
+itemlist.deleteAt(5)
+# itemlist.deleteAt(1)
+print("Item count", itemlist.get_count())
+itemlist.dump_list()
